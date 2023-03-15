@@ -1,0 +1,20 @@
+package com.devhetor.workshopmongodb.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.devhetor.workshopmongodb.domain.User;
+import com.devhetor.workshopmongodb.repository.UserRepository;
+
+@Service
+public class UserService {
+	@Autowired
+	private UserRepository repo;
+
+	public List<User> findAll() {
+		return repo.findAll();
+	}
+
+}
